@@ -11,3 +11,16 @@ C:\Users\JB\Desktop\La Manu\Git\Projet_1_Application_console\Projet_1 applicatio
 C:\Users\JB\Desktop\La Manu\Git\Projet_1_Application_console\Projet_1 application_console\obj\Debug\netcoreapp3.1\Projet_1 application_console.dll
 C:\Users\JB\Desktop\La Manu\Git\Projet_1_Application_console\Projet_1 application_console\obj\Debug\netcoreapp3.1\Projet_1 application_console.pdb
 C:\Users\JB\Desktop\La Manu\Git\Projet_1_Application_console\Projet_1 application_console\obj\Debug\netcoreapp3.1\Projet_1 application_console.genruntimeconfig.cache
+C:\Users\ponta\Desktop\La manu\Git\Projet_1_Application_console\Projet_1 application_console\obj\Debug\netcoreapp3.1\Projet_1 application_console.csprojAssemblyReference.cache
+C:\Users\ponta\Desktop\La manu\Git\Projet_1_Application_console\Projet_1 application_console\obj\Debug\netcoreapp3.1\Projet_1 application_console.AssemblyInfoInputs.cache
+C:\Users\ponta\Desktop\La manu\Git\Projet_1_Application_console\Projet_1 application_console\obj\Debug\netcoreapp3.1\Projet_1 application_console.AssemblyInfo.cs
+C:\Users\ponta\Desktop\La manu\Git\Projet_1_Application_console\Projet_1 application_console\obj\Debug\netcoreapp3.1\Projet_1 application_console.csproj.CoreCompileInputs.cache
+C:\Users\ponta\Desktop\La manu\Git\Projet_1_Application_console\Projet_1 application_console\obj\Debug\netcoreapp3.1\Projet_1 application_console.dll
+C:\Users\ponta\Desktop\La manu\Git\Projet_1_Application_console\Projet_1 application_console\obj\Debug\netcoreapp3.1\Projet_1 application_console.pdb
+C:\Users\ponta\Desktop\La manu\Git\Projet_1_Application_console\Projet_1 application_console\bin\Debug\netcoreapp3.1\Projet_1 application_console.exe
+C:\Users\ponta\Desktop\La manu\Git\Projet_1_Application_console\Projet_1 application_console\bin\Debug\netcoreapp3.1\Projet_1 application_console.deps.json
+C:\Users\ponta\Desktop\La manu\Git\Projet_1_Application_console\Projet_1 application_console\bin\Debug\netcoreapp3.1\Projet_1 application_console.runtimeconfig.json
+C:\Users\ponta\Desktop\La manu\Git\Projet_1_Application_console\Projet_1 application_console\bin\Debug\netcoreapp3.1\Projet_1 application_console.runtimeconfig.dev.json
+C:\Users\ponta\Desktop\La manu\Git\Projet_1_Application_console\Projet_1 application_console\bin\Debug\netcoreapp3.1\Projet_1 application_console.dll
+C:\Users\ponta\Desktop\La manu\Git\Projet_1_Application_console\Projet_1 application_console\bin\Debug\netcoreapp3.1\Projet_1 application_console.pdb
+C:\Users\ponta\Desktop\La manu\Git\Projet_1_Application_console\Projet_1 application_console\obj\Debug\netcoreapp3.1\Projet_1 application_console.genruntimeconfig.cache

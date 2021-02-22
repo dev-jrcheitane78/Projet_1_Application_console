@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\JB\\.nuget\\packages\\": {}
+    "C:\\Users\\ponta\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JB\\Desktop\\La Manu\\Git\\Projet_1_Application_console\\Projet_1 application_console\\Projet_1 application_console.csproj",
+      "projectUniqueName": "C:\\Users\\ponta\\Desktop\\La manu\\Git\\Projet_1_Application_console\\Projet_1 application_console\\Projet_1 application_console.csproj",
       "projectName": "Projet_1 application_console",
-      "projectPath": "C:\\Users\\JB\\Desktop\\La Manu\\Git\\Projet_1_Application_console\\Projet_1 application_console\\Projet_1 application_console.csproj",
-      "packagesPath": "C:\\Users\\JB\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JB\\Desktop\\La Manu\\Git\\Projet_1_Application_console\\Projet_1 application_console\\obj\\",
+      "projectPath": "C:\\Users\\ponta\\Desktop\\La manu\\Git\\Projet_1_Application_console\\Projet_1 application_console\\Projet_1 application_console.csproj",
+      "packagesPath": "C:\\Users\\ponta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ponta\\Desktop\\La manu\\Git\\Projet_1_Application_console\\Projet_1 application_console\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\JB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ponta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
