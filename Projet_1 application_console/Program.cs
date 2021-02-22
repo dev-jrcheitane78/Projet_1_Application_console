@@ -1,12 +1,4 @@
 ﻿using System;
-
-namespace Projet_1_application_console
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -70,9 +62,5 @@ namespace Projet_1_Application_console
 
 
 
-    }
-}
-
-        }
     }
 }
