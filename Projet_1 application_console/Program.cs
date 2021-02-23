@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 using System.Collections.Generic;
 
 namespace Projet_1_application_console
@@ -9,9 +8,8 @@ namespace Projet_1_application_console
         static void Main()
 
         {
-            
-
-            Tuple<object[], object[], object[], object[], object[]>[] AnswersResponse = {
+            // Creation du tuple avec des objets pour item
+            Tuple<object[], object[], object[], object[], object[]>[] AnswersQuestion = {
                 Tuple.Create(new object[] {1, "Question 1: Quelle est la bonne sythaxe pour afficher 'Hello World' en C# ?"  }, 
                 new object[] { "Console.WriteLine('Hello World');", true  },
                 new object[] { "Print'Hello World", false},
@@ -63,27 +61,32 @@ namespace Projet_1_application_console
                 new object[] { "string s = @'Test string';", false },
                 new object[] { "string s = 'Test string';", true })
             };
-
+            // initialisation du compteur pour pouvoir afficher le score.
             int compteur = 0;
-            Console.WriteLine($" Vous allez effectuez un test qui comporte 10 Questions. " +
-                              $"\n 4 reponses seront associées a chaque question, vous devez repondre en tapant une valeur numerique comprise entre 1 et 4");
 
-            Console.WriteLine($"Entrez votre nom: ");
+            // Presentation du quizz a l'utilisateur
+            Console.WriteLine($" Vous allez effectuez un test qui comporte 10 Questions. " +
+                              $"\n 4 reponses seront associées a chaque question, vous devez repondre en tapant une valeur numerique comprise entre 1 et 4" +
+                              $"\n Entrez votre nom: "
+                              );
+
             string name = Console.ReadLine();
-            Console.WriteLine($"Entrez votre prenom: ");
+            Console.WriteLine($"\n Entrez votre prenom: ");
             string firstname = Console.ReadLine();
 
 
             Console.WriteLine($"Appuyez sur la touche 1 et après sur 'Entrée' pour demarrer le test");
             int start = int.Parse(Console.ReadLine());
 
+            // Fonction de l'affichage des questions et comparatif des valeurs.
             void Question()
             {
+
+                // Creation d'une liste pour stocker les bonnes reponses
                 List<object> reponseOk = new List<object>();
-                List<object> questionReponse = new List<object>();
 
                 DateTime startTimer = DateTime.Now;
-                foreach (var item in AnswersResponse)
+                foreach (var item in AnswersQuestion)
                 {
                     object questionUser = item.Item1[1];
 
@@ -103,7 +106,6 @@ namespace Projet_1_application_console
                     Console.WriteLine($" |  3. {item.Item4[0]}                              4. {item.Item5[0]}                      |");
                     Console.WriteLine($" |                                                                                                            |");
                     Console.WriteLine($" |------------------------------------------------------------------------------------------------------------|");
-                    
                     int choixUser = int.Parse(Console.ReadLine());
                     Console.WriteLine($" |                                                                                                            |");
                     Console.WriteLine($" |   Ta reponse:  {choixUser}                                                                                            |");
@@ -111,10 +113,11 @@ namespace Projet_1_application_console
                     Console.WriteLine($" |____________________________________________________________________________________________________________|");
                     Console.WriteLine($"                                                                                                               ");
 
+                    // Conditions pour verifier si la reponse est bonne.
                     if (choixUser == 1)
                     {
                         if (a.Equals(true))
-                        {
+                         {
                             compteur++;
                             reponseOk.Add((item.Item1[1] , item.Item2[0]));
                         }
@@ -158,14 +161,8 @@ namespace Projet_1_application_console
 
                 foreach (var item in reponseOk)
                 {
-                    Console.WriteLine($"{item} clap clap");
+                    Console.WriteLine($"{item}");
                 }
-
-                
-
-
-                
-
 
                 if (compteur >= 7)
                 {
@@ -199,5 +196,4 @@ namespace Projet_1_application_console
             Console.Read();
         }
     }
-        
 }
