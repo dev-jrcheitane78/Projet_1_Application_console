@@ -6,18 +6,23 @@ using System.Collections.Generic;
 
 namespace Projet_1_application_console
 {
-    /* //Class Question may initialize with Q: set question, R: response class, goodAnswer: 1,2,3,4
+     //Class Question may initialize with Q: set question, R: response class, goodAnswer: 1,2,3,4
      //This is one Question 
      class Question
      {
+        //variables
          String question;
          readonly Responses responses;
+
+        //constructeur
          public Question(String Q, Responses R, int goodAnswer)
          {
              question = Q;
              responses = R;
              responses.SetGoodAnswer(goodAnswer);
          }
+
+        //methode Ask (fonction)
          public void Ask()
          {
              Console.WriteLine(this.question);
@@ -75,10 +80,17 @@ namespace Projet_1_application_console
          }
          public void PrintResponses()
          {
-             Console.WriteLine(this.response1, this.response2, this.response3, this.response4);
-         }
+             Console.WriteLine(this.response1 + this.response2 + this.response3 + this.response4);
+            while (Console.ReadKey(false).Key != ConsoleKey.Enter)
+            {
+                if(Console.ReadKey(false).Key == ConsoleKey.RightArrow)
+                {
+
+                }
+            }
+        }
      };
-    */
+    
     class Program
     {
 
@@ -89,17 +101,16 @@ namespace Projet_1_application_console
         new KeyValuePair<string,string>("-Quelle variable appelle une chaine de caractère ?", "C : string"),
         new KeyValuePair<string,string>("-Comment crée tu une variable numérique valant 5 ?", "D :int = x = 5;"),
     };
-
+       
 
         static void Main(string[] args)
         {
            
-
+            
             {
                 {
-                    /*   //use example
+                       //use example
                        Responses R1 = new Responses("A : Print'Hello World'", "B :System.outprintIn'HelloWorld'", "C : Console.WriteLine('Hello World')", "D : cout <<'HelloWorld'");
-
                        List<Question> questionsK = new List<Question>();
                        questionsK.Add(new Question("-Quelle est la bonne syntaxe pour afficher 'Hello World' en c#? ", R1, 4));
 
@@ -107,7 +118,7 @@ namespace Projet_1_application_console
                        {
                            q.Ask();
                        }
-                       */
+                       
 
                     Console.WriteLine("Ecrit ton nom et ton prénom :) ");
                     string name1 = Console.ReadLine();
@@ -127,7 +138,7 @@ namespace Projet_1_application_console
                     
 
                     List<List<string>> manyreponses = new List<List<string>>() { response1, response2, response3, response4 };
-
+                    
 
                     int index = 0;
                     
@@ -137,7 +148,8 @@ namespace Projet_1_application_console
                         while (!done)
                         {
                             Console.WriteLine(question.Key);
-                            response1.ForEach(Console.WriteLine); //chercher comment appeler pour chaque boucle une liste diférente
+
+                            Console.WriteLine(manyreponses[index]); //chercher comment appeler pour chaque boucle une liste diférente
                             index++;
 
                             string answer = Console.ReadLine();
