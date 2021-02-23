@@ -1,66 +1,125 @@
 ﻿using System;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Timers;
 
-namespace Projet_1_Application_console
+namespace AsmaPojetConsoleQuiz
 {
     class Program
     {
+        
+        private static System.Timers.Timer aTimer;
+       
+       
+
+
         static void Main(string[] args)
         {
-            String choix;
             int score = 0;
-            // Créer un dictionnaire  
-            Dictionary<string, string> questions = new Dictionary<string, string>();
-
-            questions.Add("CLR signifie __________ ?", "Common Language Runtime");
-
-             
-            questions.Add("GAC signifie __________ ?", "Global Assembly Cache");
-            questions.Add("Garbage collector (GC) comprend _______ générations.", "Trois");
-
-            // Créer un dictionnaire  
-            Dictionary<string, string> reponse= new Dictionary<string, string>();
-            reponse.Add("A", "Common Language Runtime");
-            reponse.Add("B", "Common Local Runtime");
-            reponse.Add("C", "Common Local Realtime");
-            reponse.Add("D", "Common Local Runtime");
+            List<string> bonReponse = new List<string>();
 
 
 
-            // Parcourir le dictionnaire
-            foreach (KeyValuePair<string, string> question in questions)
+
+            Dictionary<string, Dictionary<string,bool>> question = new Dictionary<string, Dictionary<string, bool>>();
+            question.Add("question1", new Dictionary<string, bool>() {
+   
+               { "java", true},
+               { "c#", false},
+               { "C", false  },
+
+
+
+             }) ;
+            question.Add("question2", new Dictionary<string, bool>() {
+
+
+             { "c", true},
+             { "B", false },
+             { "orienté objet", false},
+
+
+
+        });
+
+
+
+
+
+            foreach (KeyValuePair<string, Dictionary<string, bool>> group in question)
             {
 
-
-                Console.WriteLine("question:"+question.Key);
-
-                foreach (KeyValuePair<string, string> rp in reponse)
-                {
-                    Console.WriteLine("{0} - {1}",rp.Key,rp.Value);
-
-
-                }
-                Console.WriteLine("choisir le bon réponse:A/B/C ou D");
+                Console.BackgroundColor = ConsoleColor.DarkGray;
+                Console.ForegroundColor = ConsoleColor.White;
+               
+                    Console.WriteLine("|________________________________________________________|");
                 
-                
-               choix = Console.ReadLine();
-              
+               
+                    
+                Console.WriteLine($"|                   {group.Key}                              ");
+
+
+
                
 
-                if (question.Value == reponse[choix]) {
-                    score += 1;
-                
+
+                int i = 1;
+                while (i<3) { 
+                foreach (KeyValuePair<string, bool> member in group.Value)
+                {
+                    Console.WriteLine("|-----------------------------------------------------|");
+                    Console.WriteLine($"  {i} - {member.Key}                                  ");
+                      i++;
+
+
                 }
+                }
+                Console.WriteLine("|-----------------------------------------------------|");
+                Console.WriteLine("|   Ta reponse:                                       |");
+                string choix = Console.ReadLine();
+                bool p;
+                Console.WriteLine("|                                                     |");
+
+                Console.WriteLine("|_____________________________________________________|");
+                Console.WriteLine("                                                       ");
+                Console.ResetColor();
 
 
+                // On récupère juste les clefs.
+                Dictionary<string, bool>.KeyCollection myKeyCollection = group.Value.Keys;
+            
+               bool output;
+                if (group.Value.TryGetValue(choix, out output) == true)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Bonne réponse");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    bonReponse.Add(choix);
+                    score++;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Mauvais réponse");
+                    Console.ForegroundColor = ConsoleColor.White;
+                 }
+                
+ 
             }
-            Console.WriteLine("score" + score);
 
-
+            Console.WriteLine("Votre Score est " + score);
+            foreach (string l in bonReponse)
+            {
+                Console.WriteLine("les bon réponses que vous avez choisi sont : ");
+                Console.WriteLine(l);
             }
 
 
 
+          
+
+        }
     }
 }
